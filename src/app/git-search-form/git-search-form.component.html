@@ -2,15 +2,17 @@
   <img src="./assets/img5.png" />
 
   <div class="form-input">
-    <form class="form-inline">
+    <form (ngSubmit)='searchUser()' #gitsearchForm='ngForm' class="form-inline" >
       <input
+            [(ngModel)]="username"
             type="text"
             class="user-input px-3 py-2"
             id="username"
             name="username"
             placeholder="Enter Your Github Username.."
           />
-      <button type="submit" class="btn btn-sm mx-2 py-2">
+
+      <button type="submit" class="btn btn-sm mx-2">
         SEARCH
       </button>
     </form>
