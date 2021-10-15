@@ -1,0 +1,31 @@
+.cont-wrapper {
+  background-color: #f4cab1;
+  margin-top: 80px;
+}
+
+img {
+  width: 40%;
+  margin: 20px 0px 0px 320px;
+}
+
+.btn {
+    border-color: #000000;
+}
+
+::placeholder {
+  color:#000000;
+}
+
+.form-input{
+  margin: 20px 0px 0px 320px;
+  padding-bottom: 40px;
+  
+}
+
+.user-input {
+  background-color: transparent;
+  border-color: #000000;
+  border-radius: 5px;
+  outline: none;
+  width: 50%;
+}
