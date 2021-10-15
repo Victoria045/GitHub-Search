@@ -1,27 +1,37 @@
-# GitHubSearch
+# GitHub-Search
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.7.
+
+
+## Description
+A project where users can search for GitHub users and their respective Repos through searching for their username through a form and submitting.
 
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
-## Code scaffolding
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Setup/Installation Requirements
+* Open Terminal
 
-## Build
+* git clone https://github.com/Victoria045/GitHub-Search.git
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+* cd GitHub-Search
 
-## Running unit tests
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## Technologies Used
+* Bootstrap 5 v1.0 - 2021-07-09
 
-## Running end-to-end tests
+* HTML5
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+* CSS
 
-## Further help
+* AngularCLI
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+* markdown
+
+## Support and contact details
+Incase of any issues at hand, please email me at victoriaberyl45@gmail.com
+
+### License
+MIT License. 
