@@ -1,0 +1,32 @@
+.container-fluid{
+  background-color: #9cdaf0;
+  height: 6vh;
+  padding-top: 20px;
+  font-size: 18px;
+}
+
+span {
+  color: #ac5c51;
+}
+ul li {
+  list-style-type: none;
+  display: inline-block;  
+}
+
+a {
+  text-decoration: none;
+  padding-left: 14px;
+  color: #000000;
+}
+
+a:hover {
+  color: #ac5c51;
+}
+
+@media screen and (max-width: 1366px) {
+  .container-fluid{
+    height: 10vh;
+    padding-top: 25px;
+    font-size: 18px;
+  }
+}
