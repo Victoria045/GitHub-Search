@@ -20,6 +20,7 @@ import { GitSearchFormComponent } from './git-search-form/git-search-form.compon
     FormsModule,
     HttpClientModule,
   ],
+  
   providers: [],
   bootstrap: [AppComponent]
 })
