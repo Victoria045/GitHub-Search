@@ -1,0 +1,23 @@
+.userProfile {
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  border: 1px solid #000000;
+}
+
+a {
+  text-decoration: none;
+}
+.right-sec-btn {
+  display: inline-block;
+}
+
+.right-sec-btn > button::placeholder {
+  color: #000000;
+}
+
+img {
+  /* height: 24vh;
+  width: 24vw; */
+  /* border-radius: 50%; */
+  margin: auto;
+}
