@@ -15,7 +15,7 @@ export class GitSearchService {
   newUserInput: any = [];
 
   constructor(private http: HttpClient) {
-    this.user = new User("",0,"","",new Date(),new Date(),"");
+    this.user = new User("",0,"","",new Date(),new Date(),"",0,0);
   	this.repo = new Repository("","","",new Date(),"","","",new Date());
    }
 
@@ -39,12 +39,14 @@ export class GitSearchService {
 	        updated_at:Date,
 	        name:string,
 	        full_name:string, 
-	        html_url:string   
+	        html_url:string,
+					followers:number, 
+					following:number  
 	    }
 
 	    let promise = new Promise((resolve,reject)=>{
 	    
-	        this.http.get<ApiResponse>(environment.apiUrl + username).toPromise().then(response=>{
+	        this.http.get<ApiResponse>(`https://api.github.com/users/Victoria045`).toPromise().then(response=>{
 
 	            this.user!.bio=response.bio;
 	            this.user!.avatar_url=response.avatar_url;
@@ -62,7 +64,8 @@ export class GitSearchService {
 	        )
 
 	        // We then use the getmethod and pass to the API URL. we then call the subscribe function that takes in the response function that is called when the API request is successful and returns a response.
-	        this.http.get<any>(environment.apiUrl + username + "/repos").toPromise().then(response=>{
+	        this.http.get<any>(`https://api.github.com/users/Victoria045/repos`).toPromise().then(response=>{
+					
 	        	// We then pass the interface with the get method. 
 	        	for(var i=0; i<response.length; i++)
 	        	{
