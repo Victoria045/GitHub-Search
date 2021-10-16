@@ -7,12 +7,16 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { GitSearchFormComponent } from './git-search-form/git-search-form.component';
+import { OutputComponent } from './output/output.component';
+import { DateCountPipe } from './date-count.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
-    GitSearchFormComponent
+    GitSearchFormComponent,
+    OutputComponent,
+    DateCountPipe
   ],
   imports: [
     BrowserModule,
