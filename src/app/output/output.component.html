@@ -1,76 +1,52 @@
-<div class="container my-5">
-  
+<div class="container cont-wrapper">
+
+  <li><a routerLink=""><button class="btn btn-outline-dark px-3">Back</button></a></li>
   <div class="userProfile">
       <div class="left-sec">
-        <div class="card" style="width: 32rem;">
-            <img class="card-img-top" src="{{gitSearchService.user.avatar_url}}" alt="user.avatar_url">
-            <div class="card-body">
-                <h4 class="py-3">{{user.login}}</h4>
+        <div class="card">
+            <img class="card-img-top pt-2" src="{{gitSearchService.user.avatar_url}}" alt="user.avatar_url">
+            <div class="card-body text-center">
+                <h4 class="py-2">{{user.login}}</h4>
                 <p class="bio">{{user.bio}}</p>
-                <p><button class="btn btn-outline-secondary"><a href="{{user.html_url}}" target="_blank">View Github Profile</a></button></p>
+                <p><button class="btn btn-outline-secondary mt-2"><a href="{{user.html_url}}" class="text-dark" target="_blank">View Github Profile</a></button></p>
             </div>
-          </div>
-
-        <!-- <img src="{{gitSearchService.user.avatar_url}}">
-        <h4 class="py-3">{{user.login}}</h4>
-        <p class="bio">{{user.bio}}</p> -->
-        
-        
+          </div>       
       </div>
 
       <div class="right-sec">
-
-        <div class="card" style="width: 38rem;">
-            <div class="card-header">
-                <div class="right-sec-btn">
-                    <button class="btn btn-outline-secondary mx-2">{{user.public_repos}} Repositories</button>
-                    <button class="btn btn-outline-secondary mx-2">{{user.followers}} Followers</button>
-                    <button class="btn btn-outline-secondary">{{user.following}} Following</button>
-                  </div>
-            </div>
-            <ul class="list-group list-group-flush">
-              <li class="list-group-item"><p class="px-2 py-2">Date Joined: <strong>{{user.created_at|date}}</strong></p></li>
-              <li class="list-group-item"><p class="px-2">Last Update: <strong>{{user.updated_at|date}}</strong></p></li>
-              
-            </ul>
-          </div>
-
-
-          <!-- <div class="right-sec-btn">
-            <button class="btn btn-outline-secondary mx-2">{{user.public_repos}} Repositories</button>
-            <button class="btn btn-outline-secondary mx-2">{{user.followers}} Followers</button>
-            <button class="btn btn-outline-secondary">{{user.following}} Following</button>
-          </div>
-          <div>
-            <p class="px-2 py-2">Date Joined: <strong>{{user.created_at|date}}</strong></p>
-            <p class="px-2">Last Update: <strong>{{user.updated_at|date}}</strong></p>
-          </div> -->
-        
-        
-      </div>
-  </div>
-
-  <div class="col-md-3"><h4>Repositories</h4></div>
-  <div class="col-md-5">
-  <!-- <a class="btn btn-default btn-xs" (click)="goBack()" >Go Back</a>
-  <hr> -->
-   <div class="panel panel-default" >
-      <div class="panel-heading">
-          <h3 class="panel-title"></h3>
-      </div>
-      <div class="panel-body repo-detail">                    
-          <div class="git-results">                        
-              <div class="media mb15" *ngFor='let repoDetail of repoDetails'><!-- Loops Through Repository Instance Created from the APIResponse   -->
-                  <div class="media-body">
-                    <h4 class="filename text-success"><a href="{{repoDetail.html_url}}" target="_blank">{{repoDetail.name}}</a></h4>
-                    <small class="last-update">Created At: <strong>{{repoDetail.created_at|date}}</strong>&nbsp;&nbsp;|&nbsp;&nbsp;<i class="fa fa-clone" aria-hidden="true"></i>&nbsp;&nbsp;Clone:&nbsp;&nbsp;<strong appCloneHighlighter>{{repoDetail.clone_url}}</strong></small>
-                    <p class="description">{{repoDetail.description}}</p>
-                    <small class="last-update">Language: <strong>{{repoDetail.language}}</strong>&nbsp;&nbsp;|&nbsp;&nbsp;Last Updated: <strong>{{repoDetail.updated_at|date}} Days Ago</strong></small>
+        <div class="card">
+            <div class="card-header right">
+                <div class="right-sec-btn py-2">
+                    <button class="btn btn-outline-secondary mx-3 my-2">{{user.public_repos}} Repositories</button>
+                    <button class="btn btn-outline-secondary mx-3">{{user.followers}} Followers</button>
+                    <button class="btn btn-outline-secondary mx-3">{{user.following}} Following</button>
                 </div>
-            </div>                       
-        </div>                  
-    </div>
+            </div>
+
+            <ul class="list-group list-group-flush right-cont">
+              <li class="list-group-item"><p class="px-2">Company: <strong>{{user.company}}</strong></p></li>
+              <li class="list-group-item"><p class="px-2">Email: <strong>{{user.email}}</strong></p></li> 
+              <li class="list-group-item"><p class="px-2">Location: <strong>{{user.location}}</strong></p></li>
+              <li class="list-group-item"><p class="px-2">Date Joined: <strong>{{user.created_at|date}}</strong></p></li>
+              <li class="list-group-item"><p class="px-2">Last Update: <strong>{{user.updated_at|date}}</strong></p></li> 
+            </ul>
+            
+          </div>      
+      </div>
   </div>
-  </div>
-    <div class="col-md-1"></div>
-  </div>
+
+  <div class="mt-5 mb-3 "><h4 class="text-center repo-wrapper">Repositories</h4>
+  
+      <div class="repoItem">                                       
+              <div class="mb15" *ngFor='let repoItem of repoItems'>
+                  <div class="repoHeader">
+                    <h4 class="text-success"><a href="{{repoItem.html_url}}" target="_blank">{{repoItem.name}}</a></h4>
+                    <small class="last-update">Created At: <strong>{{repoItem.created_at | date}}</strong><br><br>
+                      <p>Clone:&nbsp;&nbsp;<strong appCloneHighlighter>{{repoItem.clone_url}}</strong></p></small>
+                    <p class="description">{{repoItem.description}}</p><br>
+                    <small class="last-update">Language: <strong>{{repoItem.language}}</strong>&nbsp;&nbsp;|&nbsp;&nbsp;Last Updated: <strong>{{repoItem.updated_at|date}}<span class="text-primary"> ({{repoItem.updated_at|dateCount}})</span></strong></small>
+                 </div>
+                                   
+             </div>                  
+      </div>
+  </div> 
