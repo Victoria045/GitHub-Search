@@ -10,7 +10,7 @@ import { GitSearchService } from '../services/git-search.service';
 })
 export class OutputComponent implements OnInit {
     user?:User; 
-    repoDetails? = []; 
+    repoItems? = []; 
     gitSearchService?: GitSearchService; 
   
 
@@ -20,7 +20,6 @@ export class OutputComponent implements OnInit {
 
   ngOnInit(): void {
     this.user = this.gitSearchService?.user;
-    this.repoDetails = this.gitSearchService?.repoInput;
+    this.repoItems = this.gitSearchService?.repoInput;
   }
-
 }
