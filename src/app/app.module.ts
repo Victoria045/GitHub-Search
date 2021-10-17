@@ -9,6 +9,8 @@ import { HeaderComponent } from './header/header.component';
 import { GitSearchFormComponent } from './git-search-form/git-search-form.component';
 import { OutputComponent } from './output/output.component';
 import { DateCountPipe } from './date-count.pipe';
+import { CloneHighlighterDirective } from './directives/clone-highlighter.directive';
+import { NotFoundComponent } from './not-found/not-found.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +18,9 @@ import { DateCountPipe } from './date-count.pipe';
     HeaderComponent,
     GitSearchFormComponent,
     OutputComponent,
-    DateCountPipe
+    DateCountPipe,
+    CloneHighlighterDirective,
+    NotFoundComponent
   ],
   imports: [
     BrowserModule,
