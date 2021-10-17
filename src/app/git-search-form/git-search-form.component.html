@@ -2,7 +2,7 @@
   <img src="./assets/img5.png" />
 
   <div class="form-input">
-    <form (ngSubmit)='searchUser()' #gitsearchForm='ngForm' class="form-inline" >
+    <form (ngSubmit)="searchUser('')" #gitsearchForm='ngForm' class="form-inline" >
       <input
             [(ngModel)]="username"
             type="text"
@@ -12,7 +12,7 @@
             placeholder="Enter Your Github Username.."
           />
 
-      <button type="submit" class="btn btn-sm mx-2">
+          <button type="submit" (click)="getOutput()" class="btn btn-sm mx-2">
         SEARCH
       </button>
     </form>
@@ -20,27 +20,12 @@
 </div>
 
 
-<!-- <form
-  (ngSubmit)="submitUsername()"
-  #gitSearchForm="ngForm"
-  name="gitSearchForm"
->
-  <div class="row">
-    <div class="col-md-3"></div>
-    <div class="col-md-6">
-      <input
-        type="text"
-        class="form-control input-lg mb15 user-input"
-        id="username"
-        [(ngModel)]="username"
-        name="username"
-        autocomplete="off"
-        placeholder="Github Username"
-      />
-      <button type="submit" class="btn btn-success btn-lg btn-block">
-        Search GitHub User & Repos
-      </button>
-    </div>
-    <div class="col-md-3"></div>
+<div class="container mt-5">
+  <div class="container spinner-border" role="status" [hidden]="loading">
+    <!-- <span class="sr-only">Loading...</span> -->
   </div>
-</form> -->
+</div>
+<router-outlet>
+  
+</router-outlet>
+<!-- <app-output></app-output> -->
