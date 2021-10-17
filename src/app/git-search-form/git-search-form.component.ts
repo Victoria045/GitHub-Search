@@ -1,7 +1,10 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { GitSearchService } from '../services/git-search.service';
 import { User } from '../user-class/user';
+import { Router } from '@angular/router';
+
+
 
 @Component({
   selector: 'app-git-search-form',
@@ -14,17 +17,23 @@ export class GitSearchFormComponent implements OnInit {
   user?: User;
   username?:string;
   gitSearchService: GitSearchService;
+  public loading = true;
   
-
-  searchUser() {
-    this.gitSearchService.getUserData(this.username as string);
+  getOutput() {
+    this.loading = false;
   }
 
-  constructor(gitSearchService: GitSearchService) { 
+  searchUser(pageName:string):void {
+    // this.loading = false;
+    this.gitSearchService.getUserData(this.username as string);
+    this.router.navigate(['&{pageName}']);
+    
+  }
+  
+  constructor(gitSearchService: GitSearchService, private router: Router) { 
     this.gitSearchService = gitSearchService;
   }
 
-  
   ngOnInit(): void {
   }
 
