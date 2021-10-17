@@ -1,14 +1,27 @@
+.cont-wrapper {
+  margin-top: 100px;
+}
+
+.cont-wrapper li {
+  list-style-type: none;
+}
+
 .userProfile {
   display: grid;
-  grid-template-columns: repeat(2,1fr);
-  border: 1px solid #000000;
+  grid-template-columns:500px 1fr;
+  grid-gap: 0px 20px;
+  border-radius: 5px;
+  padding: 20px 0;
 }
 
 a {
   text-decoration: none;
 }
+
 .right-sec-btn {
   display: inline-block;
+  margin: auto;
+  
 }
 
 .right-sec-btn > button::placeholder {
@@ -16,8 +29,44 @@ a {
 }
 
 img {
-  /* height: 24vh;
-  width: 24vw; */
-  /* border-radius: 50%; */
+  height: 18vh;
+  width: 14vw; 
+  border-radius: 45%;
   margin: auto;
+}
+
+.repo-wrapper {
+  background-color: #9cdaf0;
+  height: 5vh;
+  padding-top: 8px;
+}
+
+.repoItem {
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  grid-gap: 40px 80px;
+  padding: 20px;
+}
+
+.repoHeader {
+  padding: 20px;
+  border: 1px solid #000000;
+  border-radius: 5px;
+  margin: 20px;
+}
+
+@media screen and (max-width: 1366px) {
+  .cont-wrapper {
+    margin-top: 40px;
+  }
+
+  .repo-wrapper {
+    height: 10vh;
+    padding-top: 14px;
+  }
+  
+  .repoItem {
+    grid-gap: 20px 10px;
+    padding: 20px;
+  }
 }
