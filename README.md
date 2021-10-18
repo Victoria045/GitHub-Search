@@ -4,7 +4,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 
 ## Description
-A project where users can search for GitHub users and their respective Repos through searching for their username through a form and submitting.
+This is a project where users can search for GitHub users and their respective Repos through submitting a form upon entering their username.
 
 
 ## Setup/Installation Requirements
