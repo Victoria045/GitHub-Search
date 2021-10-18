@@ -30,3 +30,8 @@ img {
   width: 50%;
 }
 
+p {
+  font-family: 'Kalam', cursive;
+  font-size: 20px;
+  padding-top: 20px;
+}
