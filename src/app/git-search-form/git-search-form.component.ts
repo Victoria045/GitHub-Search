@@ -24,7 +24,6 @@ export class GitSearchFormComponent implements OnInit {
   }
 
   searchUser() {
-    // this.loading = false;
     this.gitSearchService.getUserData(this.username as string);
     this.router.navigate(['/output']);
     
