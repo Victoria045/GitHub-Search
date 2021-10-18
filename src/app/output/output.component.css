@@ -69,4 +69,9 @@ img {
     grid-gap: 20px 10px;
     padding: 20px;
   }
+
+  img {
+    height: 21vh;
+    width: 16vw; 
+  }
 }
