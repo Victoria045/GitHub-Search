@@ -23,10 +23,10 @@ export class GitSearchFormComponent implements OnInit {
     this.loading = false;
   }
 
-  searchUser(pageName:string):void {
+  searchUser() {
     // this.loading = false;
     this.gitSearchService.getUserData(this.username as string);
-    this.router.navigate(['&{pageName}']);
+    this.router.navigate(['/output']);
     
   }
   
